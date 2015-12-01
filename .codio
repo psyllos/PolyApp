@@ -1,0 +1,14 @@
+{
+// Configure your Run and Preview buttons here.
+
+// Run button configuration
+  "commands": {
+        "Node version": "node --version"
+  },
+
+// Preview button configuration
+  "preview": {
+        "Box URL": "http://{{domain}}:5000/",
+        "BrowserSync URL": "http://{{domain}}:3001/"
+  }
+}
