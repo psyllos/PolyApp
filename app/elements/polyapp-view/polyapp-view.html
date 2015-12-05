@@ -1,0 +1,61 @@
+<dom-module id="polyapp-view">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: relative;
+        height: 100%;
+      }
+
+      paper-scroll-header-panel {
+        height: 100%
+      }
+
+      paper-icon-button[hidden] {
+        display: none;
+      }
+
+      .app-name {
+        font-size: larger;
+      }
+
+      #mainContent {
+        position: relative;
+        height: 100%;
+      }
+    </style>
+
+    <paper-drawer-panel narrow="false" force-narrow="true" id="panel">
+      <div drawer>
+        <paper-toolbar>
+          <paper-icon-button icon="arrow-back" onClick="document.querySelector('#panel').togglePanel()"></paper-icon-button>
+          <div class="app-name">Menu</div>
+        </paper-toolbar>
+        <div id="menu">
+          drawer
+        </div>
+      </div>
+      <div main>
+        <paper-toolbar hidden$="{{!forceNarrow}}">
+          <paper-icon-button icon="menu" onClick="document.querySelector('#panel').togglePanel()"></paper-icon-button>
+          <div class="app-name">PolyApp</div>
+          <span class="flex"></span>
+          <paper-icon-button icon="search"></paper-icon-button>
+        </paper-toolbar>
+        <div id="mainContent">
+          main content
+        </div>
+      </div>
+    </paper-drawer-panel>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'polyapp-view',
+      ready: function() {
+        forceNarrow = true;
+      }
+    });
+  </script>
+
+</dom-module>

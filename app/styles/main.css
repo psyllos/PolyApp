@@ -1,5 +1,16 @@
+@font-face {
+  font-family: "GE Inspira";
+  src: url("fonts/GEInspiraSans-Regular-v01.woff") format('woff');
+}
+
+@font-face {
+  font-family: "GE Inspira";
+  src: url("fonts/GEInspiraSans-Bold-v01.woff") format('woff');
+  font-weight: bold;
+}
+
 body {
   background: #fafafa;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'GE Inspira', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
