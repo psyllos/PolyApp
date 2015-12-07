@@ -1,11 +1,22 @@
 @font-face {
-  font-family: "GE Inspira";
+  font-family: "GE Inspira Sans";
   src: url("fonts/GEInspiraSans-Regular-v01.woff") format('woff');
 }
 
 @font-face {
   font-family: "GE Inspira";
+  src: url("fonts/GEInspira-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: "GE Inspira Sans";
   src: url("fonts/GEInspiraSans-Bold-v01.woff") format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GE Inspira";
+  src: url("fonts/GEInspira-Bold.woff") format('woff');
   font-weight: bold;
 }
 
