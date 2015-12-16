@@ -5,55 +5,61 @@
         display: block;
         position: relative;
         height: 100%;
-      }
-
-      paper-scroll-header-panel {
-        height: 100%
-      }
-
-      paper-icon-button[hidden] {
-        display: none;
+        --paper-toolbar-height: 56px;
+        --paper-toolbar-sm-height: 48px;
       }
 
       .app-name {
-        font-size: larger;
+        font-size:18px;
+        font-weight:bold;
       }
 
-      #mainContent {
-        position: relative;
-        height: 100%;
+      .second-name {
+        border-left: 1px solid rgba(255,255,255,0.2);
+        padding-left: 24px;
+        margin-left: 24px;
+        line-height: 32px;
       }
+
+      .content {
+        height: 2000px;
+      }
+
+      paper-header-panel {
+        --paper-header-panel-shadow: {
+          height: 6px;
+          bottom: -6px;
+          box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.3);
+        };
+      }
+
     </style>
 
-    <paper-drawer-panel narrow="false" force-narrow="true" id="panel">
+    <paper-drawer-panel narrow="false" force-narrow="true" id="narrow-panel">
       <div drawer>
-        <paper-toolbar>
-          <paper-icon-button icon="arrow-back" onClick="document.querySelector('#panel').togglePanel()"></paper-icon-button>
-          <div class="app-name">Menu</div>
-        </paper-toolbar>
-        <div id="menu">
-          drawer
-        </div>
       </div>
       <div main>
-        <paper-toolbar hidden$="{{!forceNarrow}}">
-          <paper-icon-button icon="menu" onClick="document.querySelector('#panel').togglePanel()"></paper-icon-button>
-          <div class="app-name">PolyApp</div>
-          <span class="flex"></span>
-          <paper-icon-button icon="search"></paper-icon-button>
-        </paper-toolbar>
-        <div id="mainContent">
-          main content
-        </div>
+        <paper-header-panel mode="standard">
+          <paper-toolbar>
+            <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+            <div class="app-name">Sandcastle 2.0</div> 
+            <div class="app-name second-name">Home</div>
+          </paper-toolbar>
+          <div class="content">
+          </div>
+        </paper-header-panel>
       </div>
     </paper-drawer-panel>
+
+
   </template>
 
   <script>
     Polymer({
       is: 'polyapp-view',
       ready: function() {
-        forceNarrow = true;
+        this.appName = 'PolyApp';
+        //forceNarrow = true;
       }
     });
   </script>

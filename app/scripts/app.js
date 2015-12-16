@@ -13,7 +13,7 @@
   // Listen for template bound event to know when bindings
   // have resolved and content has been stamped to the page
   app.addEventListener('dom-change', function() {
-    console.log('PolyApp is ready to go!');
+    console.log('The application is ready to go!');
   });
 
   // See https://github.com/Polymer/polymer/issues/1381
